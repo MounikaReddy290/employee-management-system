@@ -165,7 +165,14 @@ Test the following operations:
 
 ## Screenshots
 
-Add screenshots of your running application here to demonstrate the user interface and employee management operations.
+### Employee List
+![Employee List](screenshots/employee-list.png)
+
+### Add Employee
+![Add Employee](screenshots/add-employee.png)
+
+### Update Employee
+![Update Employee](screenshots/update-employee.png)
 
 ## Future Improvements
 
