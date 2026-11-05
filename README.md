@@ -1,70 +1,184 @@
-# Getting Started with Create React App
+# Employee Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack Employee Management System built using **Java, Spring Boot, React.js, and MySQL**. The application allows users to manage employee records through RESTful APIs and an interactive React frontend.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add new employee records.
+- View all employees.
+- Retrieve employee details using employee ID.
+- Update existing employee information.
+- Delete employee records.
+- REST API integration between React and Spring Boot.
+- MySQL database integration.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend
+- Java
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- Maven
+- REST APIs
+- Lombok
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Fetch API
 
-### `npm test`
+### Database
+- MySQL
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tools
+- Git
+- GitHub
+- Postman
+- Visual Studio Code
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```text
+employee-management-system/
+│
+├── backend/
+│   ├── .mvn/
+│   │   └── wrapper/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/crudOperations/employee/
+│   │   │   │       ├── controller/
+│   │   │   │       ├── entity/
+│   │   │   │       ├── repository/
+│   │   │   │       ├── service/
+│   │   │   │       └── EmployeeApplication.java
+│   │   │   └── resources/
+│   │   └── test/
+│   ├── .gitattributes
+│   ├── .gitignore
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   └── pom.xml
+│
+├── public/
+├── src/
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## REST API Endpoints
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Base URL: `http://localhost:8080/api`
 
-### `npm run eject`
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/employee` | Create employee |
+| GET | `/employees` | Retrieve all employees |
+| GET | `/employee/{id}` | Retrieve employee by ID |
+| PUT | `/employee/{id}` | Update employee |
+| DELETE | `/employee/{id}` | Delete employee |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Sample Employee JSON
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```json
+{
+  "name": "abhishek",
+  "email": "abhi@example.com",
+  "phoneNumber": "9876543210",
+  "department": "IT"
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation and Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- Java JDK
+- Node.js and npm
+- MySQL
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. Clone the repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/MounikaReddy290/employee-management-system.git
 
-### Code Splitting
+cd employee-management-system
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Configure MySQL
 
-### Analyzing the Bundle Size
+Create a MySQL database and configure your database connection in:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`backend/src/main/resources/application.properties`
 
-### Making a Progressive Web App
+Keep your database credentials private. Do not commit passwords or API secrets to GitHub.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3. Start the Spring Boot Backend
 
-### Advanced Configuration
+Open a terminal:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+cd backend
 
-### Deployment
+# Windows
+mvnw.cmd spring-boot:run
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# macOS/Linux
+./mvnw spring-boot:run
+```
 
-### `npm run build` fails to minify
+The backend runs at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`http://localhost:8080`
+
+### 4. Start the React Frontend
+
+Open another terminal in the project root:
+
+```bash
+npm install
+
+npm start
+```
+
+The React development server typically runs at:
+
+`http://localhost:3000`
+
+## API Testing
+
+The REST APIs can be tested using Postman.
+
+Test the following operations:
+
+- Create an employee.
+- Retrieve all employees.
+- Retrieve an employee by ID.
+- Update employee details.
+- Delete an employee.
+
+## Screenshots
+
+Add screenshots of your running application here to demonstrate the user interface and employee management operations.
+
+## Future Improvements
+
+- Implement pagination and sorting.
+- Add employee search functionality.
+- Introduce authentication and authorization.
+- Improve automated test coverage.
+- Deploy the frontend and backend.
+
+## Author
+
+**Mounika Gaddam**
+
+- **GitHub:** [MounikaReddy290](https://github.com/MounikaReddy290)
+- **LinkedIn:** [Mounika Gaddam](https://www.linkedin.com/in/mounika-reddy29/)
+- **LeetCode:** [Mounika299](https://leetcode.com/u/Mounika299/)
