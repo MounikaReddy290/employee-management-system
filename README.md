@@ -86,14 +86,14 @@ Base URL: `http://localhost:8080/api`
 
 ### Sample Employee JSON
 
-```json
+json
 {
   "name": "abhishek",
   "email": "abhi@example.com",
   "phoneNumber": "9876543210",
   "department": "IT"
 }
-```
+
 
 ## Installation and Setup
 
@@ -185,6 +185,9 @@ Test the following operations:
 ## Author
 
 **Mounika Gaddam**
+Base URL: `http://localhost:8080/api`
+
+git clone https://github.com/MounikaReddy290/employee-management-system.git
 
 - **GitHub:** [MounikaReddy290](https://github.com/MounikaReddy290)
 - **LinkedIn:** [Mounika Gaddam](https://www.linkedin.com/in/mounika-reddy29/)
