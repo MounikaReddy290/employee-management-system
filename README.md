@@ -169,7 +169,7 @@ Test the following operations:
 ![Employee List](screenshots/employee-list.png)
 
 ### Add Employee
-![Add Employee](screenshots/add-employee.png)
+![Add Employee](screenshots/post-new-employees.png)
 
 ### Update Employee
 ![Update Employee](screenshots/update-employee.png)
